@@ -12,25 +12,22 @@
   </head>
 
   <body>
-    <h1>Weather</h1>
-    <form id="getLocation">
-      <input
-        type="text"
-        id="location"
-        name="location"
-        placeholder="Enter name of a location"
-      />
-      <p id="locationError"></p>
-    </form>
-
-    <div id="content"></div>
-
-    <div id="forecast">
-      <div id="day">
-        <h4>day</h4>
-        <img src="" alt="" />
-        <p>temp</p>
-      </div>
+    <div class="topSection">
+      <h1>Weather Channel</h1>
+      <form id="getLocation">
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Enter name of a location and press Enter"
+          autocomplete="off"
+        />
+        <p id="locationError"></p>
+      </form>
     </div>
+
+    <div id="current" class="current"></div>
+
+    <div id="forecast" class="forecast"></div>
   </body>
 </html>
