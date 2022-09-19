@@ -1,4 +1,35 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aqua;
+  font-size: 1.6rem;
+}
+
 #forecastContainer {
-  background-color: beige;
   display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  font-size: 2rem;
+  padding-left: 10px;
+  width: 350px;
 }
