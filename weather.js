@@ -58,13 +58,13 @@ navigator.geolocation.getCurrentPosition(
 //Function to update weather using coordinates, asynchronous due delay in receiving response to API call
 async function updateWeatherByCoords(latitude, longitude) {
   const currentResult = await axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=fcfa657b215adff2f15f5b0cbcaeea45`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=`
   );
 
   refreshCurrentDisplay(currentResult.data); //Call function that will update DOM
 
   const forecastResult = await axios.get(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=fcfa657b215adff2f15f5b0cbcaeea45`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=`
   );
   const forecastData = processForecastResult(forecastResult); //Call function to process data received from API call
 
@@ -75,12 +75,12 @@ async function updateWeatherByCoords(latitude, longitude) {
 async function updateWeatherByCityName(cityName) {
   try {
     const currentResult = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=fcfa657b215adff2f15f5b0cbcaeea45`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=`
     );
 
     refreshCurrentDisplay(currentResult.data);
     const forecastResult = await axios.get(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=fcfa657b215adff2f15f5b0cbcaeea45`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=`
     );
 
     const forecastData = processForecastResult(forecastResult);
